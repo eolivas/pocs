@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Architecture tests for the Origination reference service. Enforces the Clean
+    Architecture dependency rule with NetArchTest. This is the template other
+    services' architecture tests follow.
+  -->
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="NetArchTest.Rules" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Origination\LoanManagement.Origination.Domain\LoanManagement.Origination.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Origination\LoanManagement.Origination.Application\LoanManagement.Origination.Application.csproj" />
+    <ProjectReference Include="..\..\src\Origination\LoanManagement.Origination.Infrastructure\LoanManagement.Origination.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Origination\LoanManagement.Origination.Api\LoanManagement.Origination.Api.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+</Project>

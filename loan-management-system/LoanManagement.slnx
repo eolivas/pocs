@@ -1,0 +1,66 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Bff/">
+    <Project Path="src/Bff/LoanManagement.Bff.Application/LoanManagement.Bff.Application.csproj" />
+    <Project Path="src/Bff/LoanManagement.Bff.Portal/LoanManagement.Bff.Portal.csproj" />
+  </Folder>
+  <Folder Name="/src/Collections/">
+    <Project Path="src/Collections/LoanManagement.Collections.Api/LoanManagement.Collections.Api.csproj" />
+    <Project Path="src/Collections/LoanManagement.Collections.Application/LoanManagement.Collections.Application.csproj" />
+    <Project Path="src/Collections/LoanManagement.Collections.Domain/LoanManagement.Collections.Domain.csproj" />
+    <Project Path="src/Collections/LoanManagement.Collections.Infrastructure/LoanManagement.Collections.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Communications/">
+    <Project Path="src/Communications/LoanManagement.Communications.Api/LoanManagement.Communications.Api.csproj" />
+    <Project Path="src/Communications/LoanManagement.Communications.Application/LoanManagement.Communications.Application.csproj" />
+    <Project Path="src/Communications/LoanManagement.Communications.Domain/LoanManagement.Communications.Domain.csproj" />
+    <Project Path="src/Communications/LoanManagement.Communications.Infrastructure/LoanManagement.Communications.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/ComplianceReporting/">
+    <Project Path="src/ComplianceReporting/LoanManagement.ComplianceReporting.Api/LoanManagement.ComplianceReporting.Api.csproj" />
+    <Project Path="src/ComplianceReporting/LoanManagement.ComplianceReporting.Application/LoanManagement.ComplianceReporting.Application.csproj" />
+    <Project Path="src/ComplianceReporting/LoanManagement.ComplianceReporting.Domain/LoanManagement.ComplianceReporting.Domain.csproj" />
+    <Project Path="src/ComplianceReporting/LoanManagement.ComplianceReporting.Infrastructure/LoanManagement.ComplianceReporting.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Contracts/">
+    <Project Path="src/Contracts/LoanManagement.Contracts.Api/LoanManagement.Contracts.Api.csproj" />
+    <Project Path="src/Contracts/LoanManagement.Contracts.Application/LoanManagement.Contracts.Application.csproj" />
+    <Project Path="src/Contracts/LoanManagement.Contracts.Domain/LoanManagement.Contracts.Domain.csproj" />
+    <Project Path="src/Contracts/LoanManagement.Contracts.Infrastructure/LoanManagement.Contracts.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/CreditEngine/">
+    <Project Path="src/CreditEngine/LoanManagement.CreditEngine.Api/LoanManagement.CreditEngine.Api.csproj" />
+    <Project Path="src/CreditEngine/LoanManagement.CreditEngine.Application/LoanManagement.CreditEngine.Application.csproj" />
+    <Project Path="src/CreditEngine/LoanManagement.CreditEngine.Domain/LoanManagement.CreditEngine.Domain.csproj" />
+    <Project Path="src/CreditEngine/LoanManagement.CreditEngine.Infrastructure/LoanManagement.CreditEngine.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/CustomerPortal/">
+    <Project Path="src/CustomerPortal/LoanManagement.CustomerPortal.Api/LoanManagement.CustomerPortal.Api.csproj" />
+    <Project Path="src/CustomerPortal/LoanManagement.CustomerPortal.Application/LoanManagement.CustomerPortal.Application.csproj" />
+    <Project Path="src/CustomerPortal/LoanManagement.CustomerPortal.Domain/LoanManagement.CustomerPortal.Domain.csproj" />
+    <Project Path="src/CustomerPortal/LoanManagement.CustomerPortal.Infrastructure/LoanManagement.CustomerPortal.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Loans/">
+    <Project Path="src/Loans/LoanManagement.Loans.Api/LoanManagement.Loans.Api.csproj" />
+    <Project Path="src/Loans/LoanManagement.Loans.Application/LoanManagement.Loans.Application.csproj" />
+    <Project Path="src/Loans/LoanManagement.Loans.Domain/LoanManagement.Loans.Domain.csproj" />
+    <Project Path="src/Loans/LoanManagement.Loans.Infrastructure/LoanManagement.Loans.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Origination/">
+    <Project Path="src/Origination/LoanManagement.Origination.Api/LoanManagement.Origination.Api.csproj" />
+    <Project Path="src/Origination/LoanManagement.Origination.Application/LoanManagement.Origination.Application.csproj" />
+    <Project Path="src/Origination/LoanManagement.Origination.Domain/LoanManagement.Origination.Domain.csproj" />
+    <Project Path="src/Origination/LoanManagement.Origination.Infrastructure/LoanManagement.Origination.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Shared/">
+    <Project Path="src/Shared/LoanManagement.Shared.Kernel/LoanManagement.Shared.Kernel.csproj" />
+    <Project Path="src/Shared/LoanManagement.Shared.Messaging/LoanManagement.Shared.Messaging.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LoanManagement.CustomerPortal.IntegrationTests/LoanManagement.CustomerPortal.IntegrationTests.csproj" />
+    <Project Path="tests/LoanManagement.Loans.Domain.Tests/LoanManagement.Loans.Domain.Tests.csproj" />
+    <Project Path="tests/LoanManagement.Loans.IntegrationTests/LoanManagement.Loans.IntegrationTests.csproj" />
+    <Project Path="tests/LoanManagement.Origination.Architecture.Tests/LoanManagement.Origination.Architecture.Tests.csproj" />
+    <Project Path="tests/LoanManagement.Origination.IntegrationTests/LoanManagement.Origination.IntegrationTests.csproj" />
+  </Folder>
+</Solution>

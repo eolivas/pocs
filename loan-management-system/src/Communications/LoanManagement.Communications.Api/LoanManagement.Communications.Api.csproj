@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!-- Api layer: Minimal API endpoints, middleware, Program.cs. Depends on all lower layers. -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\LoanManagement.Communications.Domain\LoanManagement.Communications.Domain.csproj" />
+    <ProjectReference Include="..\LoanManagement.Communications.Application\LoanManagement.Communications.Application.csproj" />
+    <ProjectReference Include="..\LoanManagement.Communications.Infrastructure\LoanManagement.Communications.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" />
+  </ItemGroup>
+
+</Project>

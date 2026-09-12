@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!--
+    Portal BFF: serves the post-funding borrower Portal Frontend. The only
+    component making synchronous cross-service calls for the portal experience,
+    composing from Loans, Contracts, and Customer Portal. No domain, no database.
+  -->
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http.Resilience" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Application layer: commands, queries, handlers, DTOs, validators. Depends on Domain only. -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\LoanManagement.CreditEngine.Domain\LoanManagement.CreditEngine.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+  </ItemGroup>
+
+</Project>

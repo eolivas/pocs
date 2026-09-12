@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Domain layer: aggregates, value objects, domain events, repository interfaces.
+    Depends only on the Shared.Kernel base types (Entity/AggregateRoot/DomainEvent) —
+    no infrastructure, no EF Core, no MassTransit.
+  -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\LoanManagement.Shared.Kernel\LoanManagement.Shared.Kernel.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Infrastructure layer: EF Core (SQL Server), outbox, messaging via the shared building block. Depends on Domain + Application. -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\LoanManagement.Origination.Domain\LoanManagement.Origination.Domain.csproj" />
+    <ProjectReference Include="..\LoanManagement.Origination.Application\LoanManagement.Origination.Application.csproj" />
+    <ProjectReference Include="..\..\Shared\LoanManagement.Shared.Kernel\LoanManagement.Shared.Kernel.csproj" />
+    <ProjectReference Include="..\..\Shared\LoanManagement.Shared.Messaging\LoanManagement.Shared.Messaging.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+  </ItemGroup>
+
+</Project>

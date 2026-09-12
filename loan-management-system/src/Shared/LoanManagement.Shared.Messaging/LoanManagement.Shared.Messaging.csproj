@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Shared messaging building block. Centralizes MassTransit transport selection
+    so every service configures messaging identically via one config-driven
+    extension (AddLoanManagementMessaging). Consumers, publishers, and the outbox
+    are unaffected by which transport is chosen.
+
+    Kafka is intentionally NOT referenced here — it is a documented, stubbed option
+    (a MassTransit rider with a log/offset model and no native DLQ), selectable in
+    config but throwing a clear NotSupportedException until wired in a deep-dive.
+  -->
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" />
+    <PackageReference Include="MassTransit.RabbitMQ" />
+    <PackageReference Include="MassTransit.AmazonSQS" />
+    <PackageReference Include="MassTransit.Azure.ServiceBus.Core" />
+    <!-- Referenced directly at 10.0.3 to resolve the MassTransit-vs-net9 downgrade (NU1605). -->
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Options" />
+  </ItemGroup>
+
+</Project>

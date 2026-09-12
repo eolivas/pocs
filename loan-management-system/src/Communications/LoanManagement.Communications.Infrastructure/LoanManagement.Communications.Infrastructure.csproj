@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Infrastructure layer: EF Core (SQL Server), messaging via the shared building block. Depends on Domain + Application. -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\LoanManagement.Communications.Domain\LoanManagement.Communications.Domain.csproj" />
+    <ProjectReference Include="..\LoanManagement.Communications.Application\LoanManagement.Communications.Application.csproj" />
+    <ProjectReference Include="..\..\Shared\LoanManagement.Shared.Messaging\LoanManagement.Shared.Messaging.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" />
+  </ItemGroup>
+
+</Project>

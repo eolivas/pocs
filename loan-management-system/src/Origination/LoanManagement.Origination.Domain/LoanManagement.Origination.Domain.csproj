@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Domain layer: aggregates, value objects, domain events, repository interfaces.
+    Depends only on the Shared.Kernel base types.
+  -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\LoanManagement.Shared.Kernel\LoanManagement.Shared.Kernel.csproj" />
+  </ItemGroup>
+
+</Project>

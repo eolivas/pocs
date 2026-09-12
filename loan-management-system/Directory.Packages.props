@@ -1,0 +1,66 @@
+<Project>
+
+  <!--
+    Central Package Management (CPM) for the POC.
+    All NuGet versions are pinned here; individual projects reference packages
+    without a Version attribute. See:
+    https://learn.microsoft.com/nuget/consume-packages/central-package-management
+
+    MassTransit is pinned to the latest v8.x line, which remains open-source.
+    v9+ moved to a commercial licensing model.
+  -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <!-- Pin transitive versions too. Needed so the Microsoft.Extensions.* 10.0.3 pins
+         win over the 9.x versions pulled transitively (MassTransit vs net9 framework). -->
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Messaging (async events + outbox). MassTransit transports, all pinned to
+         the open-source v8 line. Kafka is intentionally NOT referenced — it is a
+         documented, stubbed-but-not-wired option (a rider with a different model). -->
+    <PackageVersion Include="MassTransit" Version="8.5.10" />
+    <PackageVersion Include="MassTransit.RabbitMQ" Version="8.5.10" />
+    <PackageVersion Include="MassTransit.AmazonSQS" Version="8.5.10" />
+    <PackageVersion Include="MassTransit.Azure.ServiceBus.Core" Version="8.5.10" />
+    <PackageVersion Include="MassTransit.TestFramework" Version="8.5.10" />
+
+    <!-- Persistence: EF Core on SQL Server -->
+    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="9.0.9" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.9" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.9" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.9" />
+
+    <!-- Application layer -->
+    <PackageVersion Include="MediatR" Version="12.4.1" />
+    <PackageVersion Include="FluentValidation" Version="11.10.0" />
+    <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="11.10.0" />
+
+    <!-- Health checks -->
+    <PackageVersion Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="9.0.9" />
+
+    <!-- Shared messaging building block. MassTransit 8.5.10 pulls Microsoft.Extensions.*
+         10.0.3; pin + reference these directly at 10.0.3 to resolve the NU1605 downgrade
+         (per NuGet's own guidance to reference the package directly). -->
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.3" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.3" />
+    <PackageVersion Include="Microsoft.Extensions.Options" Version="10.0.3" />
+    <!-- BackgroundService (outbox processor) + logging in Infrastructure; 10.0.3 to
+         align with the MassTransit transitive graph and avoid NU1605. -->
+    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.3" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.3" />
+
+    <!-- BFF resilience for synchronous composition -->
+    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="9.0.0" />
+
+    <!-- Architecture tests -->
+    <PackageVersion Include="NetArchTest.Rules" Version="1.3.2" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageVersion Include="xunit" Version="2.9.2" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageVersion Include="coverlet.collector" Version="6.0.2" />
+    <PackageVersion Include="FluentAssertions" Version="6.12.1" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+# .NET build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+
+# Test artifacts
+TestResults/
+*.trx
+
+# Node / frontend
+node_modules/
+dist/
+*.local
+*.tsbuildinfo
+
+# IDE / OS
+.vs/
+.idea/
+Thumbs.db
+.DS_Store
